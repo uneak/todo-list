@@ -3,6 +3,10 @@ const createTodoItem = ($ul, $count, todo) => {
     li.className = 'todo-item'
     li.dataset.id = todo.id
 
+    if (todo.completed) {
+        li.classList.add('todo-item-checked');
+    }
+
     const checkbox = document.createElement('input')
     checkbox.type = 'checkbox'
     checkbox.className = 'todo-checkbox'
