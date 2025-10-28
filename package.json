@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
+    "tabler-icons": "^1.35.0",
     "tailwindcss": "^4.1.16"
   }
 }

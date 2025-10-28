@@ -15,16 +15,8 @@
 
       <!-- Input -->
       <div class="flex gap-2 mb-6">
-        <input
-          type="text"
-          id="todoInput"
-          placeholder="Ajouter une tâche..."
-          class="flex-1 input-base"
-        />
-        <button
-          id="addBtn"
-          class="btn-primary"
-        >
+        <input type="text" id="todoInput" placeholder="Ajouter une tâche..." class="flex-1 input-base" />
+        <button id="addBtn" class="btn-primary">
           +
         </button>
       </div>
@@ -32,9 +24,29 @@
       <!-- Liste des tâches -->
       <ul id="todoList" class="space-y-2"></ul>
 
-      <!-- Compteur -->
-      <div class="mt-6 pt-4 border-t border-gray-200 text-center text-sm text-gray-600">
-        <span id="count">0</span> tâche(s)
+      <!-- Compteur et Actions -->
+      <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
+        <div class="text-sm text-gray-600">
+          <span id="count">0</span> tâche(s)
+        </div>
+        <div id="actions" class="flex gap-2">
+          <!-- Input caché pour l'upload de fichier -->
+          <input type="file" id="fileInput" accept=".json" style="display: none;" />
+
+          <button id="import" class="btn-primary flex items-center gap-2">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </button>
+
+          <button id="export" class="btn-primary flex items-center gap-2">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 8v12a2 2 0 002 2h12a2 2 0 002-2V8m-4-4l-4-4m0 0l-4 4m4-4v12" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
