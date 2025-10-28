@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition;
+  }
+
+  .btn-delete {
+    @apply text-red-500 hover:text-red-700 font-bold cursor-pointer;
+  }
+
+  .todo-item {
+    @apply flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition;
+  }
+
+  .todo-item-checked {
+    @apply opacity-50;
+  }
+
+  .todo-checkbox {
+    @apply w-5 h-5 text-blue-500 rounded cursor-pointer;
+  }
+
+  .todo-text {
+    @apply flex-1 text-gray-700;
+  }
+
+  .input-base {
+    @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+}
