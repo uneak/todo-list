@@ -35,6 +35,8 @@ $fileInput.addEventListener('change', (e) => {
         reader.onload = (event) => {
             // Parser le JSON et récupérer les données
             const data = JSON.parse(event.target.result);
+            // IMPORTANT: Vider le conteneur avant d'importer les nouvelles tâches
+            $ul.replaceChildren();
             // Créer une tâche pour chaque élément
             data.forEach(todo => {
                 createTodoItem($ul, $count, todo);
@@ -84,6 +86,20 @@ $export.addEventListener('click', () => {
     // Libérer la mémoire de l'URL créée
     URL.revokeObjectURL(url);
 });
+
+
+
+$input.addEventListener('keydown', (event) => {
+
+    console.log("keydown", event.key);
+
+    // Vérifier que la touche entrée est la touche Entrée
+    if (event.key === 'Enter') {
+        // Déclencher le bouton d'ajout de tâche
+        $addBtn.click();
+    }
+});
+
 
 // Event listener pour le bouton d'ajout de tâche
 $addBtn.addEventListener('click', () => {
